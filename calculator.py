@@ -43,12 +43,44 @@ while flag:
     my_str_to = my_str.split(' ')
     
     fun = my_str_to[0]
-    if fun == 'q':
-        break
-    elif fun == '+':
+    to_len = len(my_str_to)
+    
+    # assign num1 and/or num2 depending on how many numbers entered
+    if to_len > 2:
         num1 = float(my_str_to[1])
         num2 = float(my_str_to[2])
+    elif to_len == 2:
+        num1 = float(my_str_to[1])
+    
+    
+
+    if fun == 'q':
+        break
+    
+    elif fun == '+':
         result = add(num1, num2)
-        print(result)
-        flag = False
+        
+    elif fun == '-':
+        result = subtract(num1, num2)
+
+        
+    elif fun == '*':
+        result = multiply(num1, num2)
+    elif fun == '/':
+        result = divide(num1, num2)
+    elif fun == 'square':
+        result = square(num1)
+    elif fun == 'cube':
+        result = cube(num1)
+    elif fun == 'pow':
+        result = power(num1, num2)
+    elif fun == 'mod':
+        result = mod(num1, num2)
+    
+    print(result)
+        
+
+
+        
+
 
